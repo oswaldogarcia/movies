@@ -54,10 +54,11 @@ class Homepage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          SizedBox(height: 10.0),
           Container(
             padding: EdgeInsets.only(left:20.0),
             child: Text('Populars', style: Theme.of(context).textTheme.subhead)),
-          SizedBox(height: 10.0),
+          SizedBox(height: 15.0),
           StreamBuilder(
             stream: moviesProvider.popularMoviesStream,
             builder: (BuildContext context, AsyncSnapshot<List> snapshot) {

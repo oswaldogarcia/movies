@@ -24,7 +24,7 @@ class HorizontalMovie extends StatelessWidget {
     });
 
     return Container(
-      height: _screenSize.height * 0.2,
+      height: _screenSize.height * 0.3,
       child: PageView.builder(
         pageSnapping: false,
         controller: _pageController,
@@ -52,7 +52,7 @@ class HorizontalMovie extends StatelessWidget {
                 placeholder: AssetImage('assets/no-image.png'),
                 image: NetworkImage(movie.getPosterImage()),
                 fit: BoxFit.cover,
-                height: 140,
+                height: 160,
               ),
             ),
           ),
@@ -60,7 +60,9 @@ class HorizontalMovie extends StatelessWidget {
           Text(
             movie.title,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.caption,
+            maxLines: 3,
+            textAlign: TextAlign.center,
+            style: TextStyle(),
           ),
         ],
       ),
